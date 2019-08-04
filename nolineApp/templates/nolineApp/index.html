@@ -50,10 +50,11 @@
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right navbar-social">
-              <li><a href="#"><i class="ti-facebook"></i></a></li>
+              <li class="nav-item"><a class="nav-link" href="login_signup.html">Login/SignUp</a>
+              <!--<li><a href="#"><i class="ti-facebook"></i></a></li>
               <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
               <li><a href="#"><i class="ti-instagram"></i></a></li>
-              <li><a href="#"><i class="ti-skype"></i></a></li>
+              <li><a href="#"><i class="ti-skype"></i></a></li>-->
             </ul>
           </div> 
 
@@ -79,6 +80,14 @@
     </section>
     <!--================Hero Banner end =================-->  
 
+    <script>
+
+      var url1 = "{% static 'img/home/left-arrow.png' %}";
+      var url2 = "{% static 'img/home/right-arrow.png' %}";
+      alert(url1);
+      alert(url2);
+
+    </script>
     <!--================ Blog slider start =================-->  
     <section>
       <div class="container">
@@ -242,18 +251,18 @@
             </div>
           </div>
 
-          <!-- Start Blog Post Siddebar -->
+          <!-- Start Blog Post Siddebar --> <!-- 기능에 맞게 수정 필요 -->
           <div class="col-lg-4 sidebar-widgets">
               <div class="widget-wrap">
                 <div class="single-sidebar-widget newsletter-widget">
-                  <h4 class="single-sidebar-widget__title">Newsletter</h4>
+                  <h4 class="single-sidebar-widget__title">ask for information</h4>
                   <div class="form-group mt-30">
                     <div class="col-autos">
                       <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''"
                         onblur="this.placeholder = 'Enter email'">
                     </div>
                   </div>
-                  <button class="bbtns d-block mt-20 w-100">Subcribe</button>
+                  <button class="bbtns d-block mt-20 w-100">inquiry</button>
                 </div>
 
 
@@ -262,32 +271,26 @@
                   <ul class="cat-list mt-20">
                     <li>
                       <a href="#" class="d-flex justify-content-between">
-                        <p>Technology</p>
+                        <p>청춘 런웨이 마켓</p>
                         <p>(03)</p>
                       </a>
                     </li>
                     <li>
                       <a href="#" class="d-flex justify-content-between">
-                        <p>Software</p>
+                        <p>낭만 달빛 마켓</p>
                         <p>(09)</p>
                       </a>
                     </li>
                     <li>
                       <a href="#" class="d-flex justify-content-between">
-                        <p>Lifestyle</p>
+                        <p>타임 투어 마켓</p>
                         <p>(12)</p>
                       </a>
                     </li>
                     <li>
                       <a href="#" class="d-flex justify-content-between">
-                        <p>Shopping</p>
+                        <p>월드 나이트 마켓</p>
                         <p>(02)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="d-flex justify-content-between">
-                        <p>Food</p>
-                        <p>(10)</p>
                       </a>
                     </li>
                   </ul>
