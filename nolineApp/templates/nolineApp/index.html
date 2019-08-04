@@ -47,18 +47,18 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul class="nav navbar-nav menu_nav justify-content-center">
-                <li class="nav-item active"><a class="nav-link" href="{% url 'home' %}">Home</a></li> 
-                <li class="nav-item"><a class="nav-link" href="{% url 'store' %}">Store</a></li> 
-                <li class="nav-item"><a class="nav-link" href="{% url 'category' %}">Category</a>
+                <li class="nav-item active"><a class="nav-link display-1" href="{% url 'home' %}">Home</a></li> 
+                <li class="nav-item"><a class="nav-link display-1" href="{% url 'store' %}">Store</a></li> 
+                <li class="nav-item"><a class="nav-link display-1" href="{% url 'category' %}">Category</a>
 
                 <li class="nav-item submenu dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  <a href="#" class="nav-link dropdown-toggle display-1" data-toggle="dropdown" role="button" aria-haspopup="true"
                     aria-expanded="false">Review</a>
                   <ul class="dropdown-menu">
                     <li class="nav-item"><a class="nav-link" href="blog-details.html">Blog Details</a></li>
                   </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                <li class="nav-item"><a class="nav-link display-1" href="{% url 'contact' %}">Contact</a></li>
               </ul>
 
               <ul class="nav navbar-nav justify-content-center">
@@ -75,8 +75,8 @@
                   -->
 
                   <li class="nav-item submenu dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                    aria-expanded="false">Login/Signup</a>
+                  <a href="#" class="nav-link dropdown-toggle display-1" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false"> Login/Signup </a>
                     <ul class="dropdown-menu">
                       <li class="nav-item mr-auto ml-auto"><a class="nav-link" href="{% url 'login' %}"> Login </a></li>
 
@@ -102,10 +102,19 @@
       <section class="mb-30px">
         <div class="container">
           <div class="hero-banner" data-aos="">
+            <br><br>
             <div class="hero-banner__content">
               <h3>Many things - just one time</h3>
               <h1>Just eat</h1>
               <h4>May 27, 2019</h4>
+              <br><br><br><br><br><br>
+
+              <div onclick="scrawl()" role="button" class="button button-default" id="">
+                <i class="fas fa-angle-double-down"> </i>
+                <br>
+                <span class="text-center"> scrawl down </span>
+              </div>
+
             </div>
           </div>
         </div>
@@ -118,12 +127,21 @@
       var url2 = "{% static 'img/home/right-arrow.png' %}";
       alert(url1);
       alert(url2);
+
+      function scrawl(){
+        var scrollPosition = 300;
+
+        $("body").animate({
+              scrollTop: scrollPosition
+        }, 500);
+      }
+      
     </script>
     <!--================ Blog slider start =================-->  
     <section>
       <div class="container">
 
-        <div class="owl-carousel owl-theme blog-slider">
+        <div class="owl-carousel owl-theme blog-slider" id="start">
           <div class="card blog__slide text-center">
             <div class="blog__slide__img">
               <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/여의도.PNG' %}" width="360" height="190" alt="">
