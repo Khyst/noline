@@ -15,82 +15,114 @@
   <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
   <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.theme.default.min.css' %}">
   <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
-
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+   <script src="{% static 'js/wow.min.js' %}"></script>
+   <script>
+      WOW().init();
+      AOS.init();
+    </script>
 </head>
 <body>
 
-  <!--================Header Menu Area =================-->
-  <header class="header_area">
-    <div class="main_menu">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container box_1620">
+  <div class="" id="intro">
+    <!--================Header Menu Area =================-->
+    <header class="header_area">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container box_1620">
 
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand logo_h" href="index.html"><img src="{% static 'img/logo.png' %}" width= "160" hegiht="20" alt=""></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="index.html"><img src="{% static 'img/logo.png' %}" width= "160" hegiht="20" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-            <ul class="nav navbar-nav menu_nav justify-content-center">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
-              <li class="nav-item"><a class="nav-link" href="archive.html">Store</a></li> 
-              <li class="nav-item"><a class="nav-link" href="category.html">Category</a>
-              <li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Review</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="blog-details.html">Blog Details</a></li>
-                </ul>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right navbar-social">
-              <li class="nav-item"><a class="nav-link" href="login_signup.html">Login/SignUp</a>
-              <!--<li><a href="#"><i class="ti-facebook"></i></a></li>
-              <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-              <li><a href="#"><i class="ti-instagram"></i></a></li>
-              <li><a href="#"><i class="ti-skype"></i></a></li>-->
-            </ul>
-          </div> 
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+              <ul class="nav navbar-nav menu_nav justify-content-center">
+                <li class="nav-item active"><a class="nav-link" href="{% url 'home' %}">Home</a></li> 
+                <li class="nav-item"><a class="nav-link" href="{% url 'store' %}">Store</a></li> 
+                <li class="nav-item"><a class="nav-link" href="{% url 'category' %}">Category</a>
 
-        </div>
-      </nav>
-      
-    </div>
-  </header>
-  <!--================Header Menu Area =================-->
-  
-  <main class="site-main">
-    <!--================Hero Banner start =================-->  
-    <section class="mb-30px">
-      <div class="container">
-        <div class="hero-banner">
-          <div class="hero-banner__content">
-            <h3>Many things - just one time</h3>
-            <h1>Just eat</h1>
-            <h4>May 27, 2019</h4>
+                <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Review</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="nav-link" href="blog-details.html">Blog Details</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+              </ul>
+
+              <ul class="nav navbar-nav justify-content-center">
+                
+                <!--<li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false" href="#">Login/SignUp</a>
+
+                  <ul class="dropdown-menu">
+                    <li class="nav-item mr-auto ml-auto"><a class="nav-link" href="{% url 'login' %}"> Login </a></li>
+
+                    <li class="nav-item mr-auto ml-auto"><a class="nav-link" href="{% url 'join' %}"> join </a></li>
+                  </ul></li>
+                  -->
+
+                  <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Login/Signup</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item mr-auto ml-auto"><a class="nav-link" href="{% url 'login' %}"> Login </a></li>
+
+                      <li class="nav-item mr-auto ml-auto"><a class="nav-link" href="{% url 'join' %}"> join </a></li>
+                    </ul>
+                    
+                  <!--<li><a href="#"><i class="ti-facebook"></i></a></li>
+                  <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                  <li><a href="#"><i class="ti-instagram"></i></a></li>
+                  <li><a href="#"><i class="ti-skype"></i></a></li>-->
+                </li>
+              </ul>
+            </div> 
+          </div>
+        </nav>
+        
+      </div>
+    </header>
+    <!--================Header Menu Area =================-->
+    
+    <main class="site-main">
+      <!--================Hero Banner start =================-->  
+      <section class="mb-30px">
+        <div class="container">
+          <div class="hero-banner" data-aos="">
+            <div class="hero-banner__content">
+              <h3>Many things - just one time</h3>
+              <h1>Just eat</h1>
+              <h4>May 27, 2019</h4>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!--================Hero Banner end =================-->  
+      </section>
+      <!--================Hero Banner end =================-->  
+    </div>
 
     <script>
-
       var url1 = "{% static 'img/home/left-arrow.png' %}";
       var url2 = "{% static 'img/home/right-arrow.png' %}";
       alert(url1);
       alert(url2);
-
     </script>
     <!--================ Blog slider start =================-->  
     <section>
       <div class="container">
+
         <div class="owl-carousel owl-theme blog-slider">
           <div class="card blog__slide text-center">
             <div class="blog__slide__img">

@@ -16,8 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from nolineApp import views
+import accounts.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('category/', views.category, name='category'),
+    path('store/', views.store, name='store'),
+    path('review/', views.review, name='review'),
+    path('contact/', views.contact, name='contact'),
+    
+    # include()를 이용하여 url 분할 예정
+    path('accounts/login', accounts.views.login, name='login'),
+    path('accounts/join', accounts.views.join, name='join'),
+    path('accounts/logout', accounts.views.logout, name='logout'),
 ]
