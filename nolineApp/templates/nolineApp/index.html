@@ -97,6 +97,22 @@
     </header>
     <!--================Header Menu Area =================-->
     
+    <script>
+      var url1 = "{% static 'img/home/left-arrow.png' %}";
+      var url2 = "{% static 'img/home/right-arrow.png' %}";
+      alert(url1);
+      alert(url2);
+
+      function scroll(){
+        var scrollPosition = 650;
+
+        $("body").animate({
+              scrollTop: scrollPosition
+        }, 500);
+      }
+      
+    </script>
+    
     <main class="site-main">
       <!--================Hero Banner start =================-->  
       <section class="mb-30px">
@@ -109,10 +125,10 @@
               <h4>May 27, 2019</h4>
               <br><br><br><br><br><br>
 
-              <div onclick="scrawl()" role="button" class="button button-default" id="">
+              <div onclick="scroll()" role="button" class="button button-default" id="">
                 <i class="fas fa-angle-double-down"> </i>
                 <br>
-                <span class="text-center"> scrawl down </span>
+                <span class="text-center"> scroll down </span>
               </div>
 
             </div>
@@ -122,21 +138,6 @@
       <!--================Hero Banner end =================-->  
     </div>
 
-    <script>
-      var url1 = "{% static 'img/home/left-arrow.png' %}";
-      var url2 = "{% static 'img/home/right-arrow.png' %}";
-      alert(url1);
-      alert(url2);
-
-      function scrawl(){
-        var scrollPosition = 300;
-
-        $("body").animate({
-              scrollTop: scrollPosition
-        }, 500);
-      }
-      
-    </script>
     <!--================ Blog slider start =================-->  
     <section>
       <div class="container">
