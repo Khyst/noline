@@ -20,181 +20,233 @@
   <link rel="stylesheet" href="{% static 'css/animate.css' %}">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <!--<script src="{% static 'js/wow.min.js' %}"></script>-->
+  <script src="{% static 'js/custom.js' %}"></script>
 
-   <script src="{% static 'js/wow.min.js' %}"></script>
-   <script>
-      WOW().init();
-      AOS.init();
-    </script>
+  <script>
+    WOW().init();
+    AOS.init();
+  </script>
+
 </head>
 <body>
 
-  <div class="" id="intro">
-    <!--================Header Menu Area =================-->
-    <header class="header_area">
-      <div class="main_menu">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container box_1620">
+  
 
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="index.html"><img src="{% static 'img/logo.png' %}" width= "160" hegiht="20" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+  
+    <div class="" id="intro">
+      <!--================Header Menu Area =================-->
+      <header class="header_area">
+        <div class="main_menu">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container box_1620">
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-              <ul class="nav navbar-nav menu_nav justify-content-center">
-                <li class="nav-item active"><a class="nav-link display-1" href="{% url 'home' %}">Home</a></li> 
-                <li class="nav-item"><a class="nav-link display-1" href="{% url 'store' %}">Store</a></li> 
-                <li class="nav-item"><a class="nav-link display-1" href="{% url 'category' %}">Category</a>
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <a class="navbar-brand logo_h" href="index.html"><img src="{% static 'img/logo.png' %}" width= "160" hegiht="20" alt=""></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
 
-                <li class="nav-item submenu dropdown">
-                  <a href="#" class="nav-link dropdown-toggle display-1" data-toggle="dropdown" role="button" aria-haspopup="true"
-                    aria-expanded="false">Review</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="nav-link" href="blog-details.html">Blog Details</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link display-1" href="{% url 'contact' %}">Contact</a></li>
-              </ul>
-
-              <ul class="nav navbar-nav justify-content-center">
-                
-                <!--<li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                    aria-expanded="false" href="#">Login/SignUp</a>
-
-                  <ul class="dropdown-menu">
-                    <li class="nav-item mr-auto ml-auto"><a class="nav-link" href="{% url 'login' %}"> Login </a></li>
-
-                    <li class="nav-item mr-auto ml-auto"><a class="nav-link" href="{% url 'join' %}"> join </a></li>
-                  </ul></li>
-                  -->
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                <ul class="nav navbar-nav menu_nav justify-content-center">
+                  <li class="nav-item active"><a class="nav-link display-1" href="{% url 'home' %}">Home</a></li> 
+                  <li class="nav-item"><a class="nav-link display-1" href="{% url 'store' %}">Store</a></li> 
+                  <!--<li class="nav-item"><a class="nav-link display-1" href="{% url 'category' %}">Category</a>-->
+                  <li class="nav-item submenu dropdown">
+                    <a href="#" class="nav-link dropdown-toggle display-1" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">Category</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item"><a class="nav-link" href="blog-details.html">청춘 런웨이 마켓</a></li>
+                      <li class="nav-item"><a class="nav-link" href="blog-details.html">낭만 달빛 마켓</a></li>
+                      <li class="nav-item"><a class="nav-link" href="blog-details.html">타임 투어 마켓</a></li>
+                      <li class="nav-item"><a class="nav-link" href="blog-details.html">월드 나이트 마켓</a></li>
+                    </ul>
+                  </li>
 
                   <li class="nav-item submenu dropdown">
-                  <a href="#" class="nav-link dropdown-toggle display-1" data-toggle="dropdown" role="button" aria-haspopup="true"
-                    aria-expanded="false"> Login/Signup </a>
+                    <a href="#" class="nav-link dropdown-toggle display-1" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">Review</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item"><a class="nav-link" href="blog-details.html">리뷰 Details</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link display-1" href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav justify-content-center">
+                  
+                  <!--<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false" href="#">Login/SignUp</a>
+
                     <ul class="dropdown-menu">
                       <li class="nav-item mr-auto ml-auto"><a class="nav-link" href="{% url 'login' %}"> Login </a></li>
 
                       <li class="nav-item mr-auto ml-auto"><a class="nav-link" href="{% url 'join' %}"> join </a></li>
-                    </ul>
-                    
-                  <!--<li><a href="#"><i class="ti-facebook"></i></a></li>
-                  <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                  <li><a href="#"><i class="ti-instagram"></i></a></li>
-                  <li><a href="#"><i class="ti-skype"></i></a></li>-->
-                </li>
-              </ul>
-            </div> 
-          </div>
-        </nav>
-        
-      </div>
-    </header>
-    <!--================Header Menu Area =================-->
-    
-    <script>
-      var url1 = "{% static 'img/home/left-arrow.png' %}";
-      var url2 = "{% static 'img/home/right-arrow.png' %}";
-      alert(url1);
-      alert(url2);
+                    </ul></li>
+                    -->
 
-      function scroll(){
-        var scrollPosition = 650;
+                    <li class="nav-item submenu dropdown">
+                    <a href="#" class="nav-link dropdown-toggle display-1" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false"> Login/Signup </a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item mr-auto ml-auto"><a class="nav-link" href="{% url 'login' %}"> Login </a></li>
 
-        $("body").animate({
-              scrollTop: scrollPosition
-        }, 500);
-      }
+                        <li class="nav-item mr-auto ml-auto"><a class="nav-link" href="{% url 'join' %}"> join </a></li>
+                      </ul>
+                      
+                    <!--<li><a href="#"><i class="ti-facebook"></i></a></li>
+                    <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                    <li><a href="#"><i class="ti-instagram"></i></a></li>
+                    <li><a href="#"><i class="ti-skype"></i></a></li>-->
+                  </li>
+                </ul>
+              </div> 
+            </div>
+          </nav>
+          
+        </div>
+      </header>
+      <!--================Header Menu Area =================-->
       
-    </script>
-    
-    <main class="site-main">
-      <!--================Hero Banner start =================-->  
-      <section class="mb-30px">
-        <div class="container">
-          <div class="hero-banner" data-aos="">
-            <br><br>
-            <div class="hero-banner__content">
-              <h3>Many things - just one time</h3>
-              <h1>Just eat</h1>
-              <h4>May 27, 2019</h4>
-              <br><br><br><br><br><br>
+      <main class="site-main">
+        <!--================Hero Banner start =================-->  
+        <section class="mb-30px">
+          <div class="container">
+            <div class="hero-banner" data-aos="">
+              
+              <div class="hero-banner__content hero-banner__content-top">
+                <h3>Many things - just one time</h3>
+                <h1>Just eat</h1>
+                <h4>May 27, 2019</h4>
+              </div>
 
-              <div onclick="scroll()" role="button" class="button button-default" id="">
-                <i class="fas fa-angle-double-down"> </i>
-                <br>
-                <span class="text-center"> scroll down </span>
+              <div class="hero-banner__content hero-banner__content-bottom"> 
+                <div onclick="scroll()" role="button" class="button button-default" id="">
+                    <i class="fas fa-angle-double-down"> </i>
+                    <br>
+                    <span class="text-center"> scroll down </span>
+                </div>
               </div>
 
             </div>
           </div>
+        </section>
+        <!--================Hero Banner end =================-->  
+      </div>
+
+      <!--================ Blog slider start =================-->  
+      <section class="mt-50px pages" id="slider_start">
+        <div class="container">
+
+          <div class="owl-carousel owl-theme blog-slider" id="start">
+            <div class="card blog__slide text-center">
+              <div class="blog__slide__img">
+                <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/여의도.PNG' %}" width="360" height="190" alt="">
+              </div>
+              <div class="blog__slide__content">
+                <a class="blog__slide__label" href="https://www.bamdokkaebi.org/yyd-introduce">여의도</a>
+                <h3><a href="#">월드나이트마켓</a></h3> 
+                <p>매주 금/토 18:00~23:00</p>
+              </div>
+            </div>
+            <div class="card blog__slide text-center">
+              <div class="blog__slide__img">
+                <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/반포.PNG' %}" width="360" height="190" alt="">
+              </div>
+              <div class="blog__slide__content">
+                <a class="blog__slide__label" href="https://www.bamdokkaebi.org/bp-introduce">반포</a>
+                <h3><a href="#">낭만달빛마켓</a></h3>
+                <p>매주 금/토 18:00~23:00</p>
+              </div>
+            </div>
+            <div class="card blog__slide text-center">
+              <div class="blog__slide__img">
+                <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/DDP.PNG' %}" width="360" height="190"  alt="">
+              </div>
+              <div class="blog__slide__content">
+                <a class="blog__slide__label" href="https://www.bamdokkaebi.org/ddp-introduce">DDP</a>
+                <h3><a href="#">청춘런웨이마켓</a></h3>
+                <p>매주 금/토 18:00~23:00</p>
+              </div>
+            </div>
+            <div class="card blog__slide text-center">
+              <div class="blog__slide__img">
+                <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/청계천.PNG' %}"  width="360" height="190"  alt="">
+              </div>
+              <div class="blog__slide__content">
+                <a class="blog__slide__label" href="https://www.bamdokkaebi.org/cgc-introduce">청계천</a>
+                <h3><a href="#">타임투어마켓</a></h3>
+                <p>매주 토 17:00~22:00 일 16:00~21:00 </p>
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
       </section>
-      <!--================Hero Banner end =================-->  
-    </div>
+      <!--================ Blog slider end =================-->  
 
-    <!--================ Blog slider start =================-->  
-    <section>
-      <div class="container">
-
-        <div class="owl-carousel owl-theme blog-slider" id="start">
-          <div class="card blog__slide text-center">
-            <div class="blog__slide__img">
-              <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/여의도.PNG' %}" width="360" height="190" alt="">
+      <!--================ Blog slider start =================-->  
+      <section class="mt-50px pages" id="slider_start">
+        <div class="container">
+          <div class="owl-carousel owl-theme blog-slider" id="start">
+            <div class="card blog__slide text-center">
+              <div class="blog__slide__img">
+                <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/여의도.PNG' %}" width="360" height="190" alt="">
+              </div>
+              <div class="blog__slide__content">
+                <a class="blog__slide__label" href="https://www.bamdokkaebi.org/yyd-introduce">여의도</a>
+                <h3><a href="#">월드나이트마켓</a></h3> 
+                <p>매주 금/토 18:00~23:00</p>
+              </div>
             </div>
-            <div class="blog__slide__content">
-              <a class="blog__slide__label" href="https://www.bamdokkaebi.org/yyd-introduce">여의도</a>
-              <h3><a href="#">월드나이트마켓</a></h3> 
-              <p>매주 금/토 18:00~23:00</p>
+            <div class="card blog__slide text-center">
+              <div class="blog__slide__img">
+                <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/반포.PNG' %}" width="360" height="190" alt="">
+              </div>
+              <div class="blog__slide__content">
+                <a class="blog__slide__label" href="https://www.bamdokkaebi.org/bp-introduce">반포</a>
+                <h3><a href="#">낭만달빛마켓</a></h3>
+                <p>매주 금/토 18:00~23:00</p>
+              </div>
             </div>
-          </div>
-          <div class="card blog__slide text-center">
-            <div class="blog__slide__img">
-              <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/반포.PNG' %}" width="360" height="190" alt="">
+            <div class="card blog__slide text-center">
+              <div class="blog__slide__img">
+                <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/DDP.PNG' %}" width="360" height="190"  alt="">
+              </div>
+              <div class="blog__slide__content">
+                <a class="blog__slide__label" href="https://www.bamdokkaebi.org/ddp-introduce">DDP</a>
+                <h3><a href="#">청춘런웨이마켓</a></h3>
+                <p>매주 금/토 18:00~23:00</p>
+              </div>
             </div>
-            <div class="blog__slide__content">
-              <a class="blog__slide__label" href="https://www.bamdokkaebi.org/bp-introduce">반포</a>
-              <h3><a href="#">낭만달빛마켓</a></h3>
-              <p>매주 금/토 18:00~23:00</p>
+            <div class="card blog__slide text-center">
+              <div class="blog__slide__img">
+                <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/청계천.PNG' %}"  width="360" height="190"  alt="">
+              </div>
+              <div class="blog__slide__content">
+                <a class="blog__slide__label" href="https://www.bamdokkaebi.org/cgc-introduce">청계천</a>
+                <h3><a href="#">타임투어마켓</a></h3>
+                <p>매주 토 17:00~22:00 일 16:00~21:00 </p>
+              </div>
             </div>
-          </div>
-          <div class="card blog__slide text-center">
-            <div class="blog__slide__img">
-              <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/DDP.PNG' %}" width="360" height="190"  alt="">
             </div>
-            <div class="blog__slide__content">
-              <a class="blog__slide__label" href="https://www.bamdokkaebi.org/ddp-introduce">DDP</a>
-              <h3><a href="#">청춘런웨이마켓</a></h3>
-              <p>매주 금/토 18:00~23:00</p>
-            </div>
-          </div>
-          <div class="card blog__slide text-center">
-            <div class="blog__slide__img">
-              <img class="card-img rounded-0" src="{% static 'img/blog/blog-slider/청계천.PNG' %}"  width="360" height="190"  alt="">
-            </div>
-            <div class="blog__slide__content">
-              <a class="blog__slide__label" href="https://www.bamdokkaebi.org/cgc-introduce">청계천</a>
-              <h3><a href="#">타임투어마켓</a></h3>
-              <p>매주 토 17:00~22:00 일 16:00~21:00 </p>
-            </div>
-          </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!--================ Blog slider end =================-->  
+      </section>
+      <!--================ Blog slider end =================-->  
+    
 
     <!--================ Start Blog Post Area =================-->
     <section class="blog-post-area section-margin mt-4">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8">
-            <div class="single-recent-blog-post">
+          <div class="col-lg-8 single-recent-blog-posts">
+            <div class="single-recent-blog-post" id="post1">
               <div class="thumb">
                 <img class="img-fluid" src="{% static 'img/blog/blog1.png' %}" alt="">
                 <ul class="thumb-info">
@@ -214,7 +266,7 @@
               </div>
             </div>
 
-            <div class="single-recent-blog-post">
+            <div class="single-recent-blog-post" id="post2">
               <div class="thumb">
                 <img class="img-fluid" src="{% static 'img/blog/blog2.png' %}" alt="">
                 <ul class="thumb-info">
@@ -234,7 +286,7 @@
               </div>
             </div>
 
-            <div class="single-recent-blog-post">
+            <div class="single-recent-blog-post" id="post3">
               <div class="thumb">
                 <img class="img-fluid" src="{% static 'img/blog/blog3.png' %}" alt="">
                 <ul class="thumb-info">
@@ -254,7 +306,7 @@
               </div>
             </div>
 
-            <div class="single-recent-blog-post">
+            <div class="single-recent-blog-post" id="post4">
               <div class="thumb">
                 <img class="img-fluid" src="{% static 'img/blog/blog4.png' %}" alt="">
                 <ul class="thumb-info">
@@ -306,14 +358,14 @@
           <div class="col-lg-4 sidebar-widgets">
               <div class="widget-wrap">
                 <div class="single-sidebar-widget newsletter-widget">
-                  <h4 class="single-sidebar-widget__title">ask for information</h4>
+                  <h4 class="single-sidebar-widget__title"> search for foods </h4>
                   <div class="form-group mt-30">
                     <div class="col-autos">
-                      <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''"
+                      <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter foods name" onfocus="this.placeholder = ''"
                         onblur="this.placeholder = 'Enter email'">
                     </div>
                   </div>
-                  <button class="bbtns d-block mt-20 w-100">inquiry</button>
+                  <button class="bbtns d-block mt-20 w-100"> search </button>
                 </div>
 
 
@@ -346,89 +398,9 @@
                     </li>
                   </ul>
                 </div>
-
-                <div class="single-sidebar-widget popular-post-widget">
-                  <h4 class="single-sidebar-widget__title">Popular Post</h4>
-                  <div class="popular-post-list">
-                    <div class="single-post-list">
-                      <div class="thumb">
-                        <img class="card-img rounded-0" src="{% static 'img/blog/thumb/thumb1.png' %}" alt="">
-                        <ul class="thumb-info">
-                          <li><a href="#">Adam Colinge</a></li>
-                          <li><a href="#">Dec 15</a></li>
-                        </ul>
-                      </div>
-                      <div class="details mt-20">
-                        <a href="blog-single.html">
-                          <h6>Accused of assaulting flight attendant miktake alaways</h6>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="single-post-list">
-                      <div class="thumb">
-                        <img class="card-img rounded-0" src="{% static 'img/blog/thumb/thumb2.png' %}" alt="">
-                        <ul class="thumb-info">
-                          <li><a href="#">Adam Colinge</a></li>
-                          <li><a href="#">Dec 15</a></li>
-                        </ul>
-                      </div>
-                      <div class="details mt-20">
-                        <a href="blog-single.html">
-                          <h6>Tennessee outback steakhouse the
-                            worker diagnosed</h6>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="single-post-list">
-                      <div class="thumb">
-                        <img class="card-img rounded-0" src="{% static 'img/blog/thumb/thumb3.png' %}" alt="">
-                        <ul class="thumb-info">
-                          <li><a href="#">Adam Colinge</a></li>
-                          <li><a href="#">Dec 15</a></li>
-                        </ul>
-                      </div>
-                      <div class="details mt-20">
-                        <a href="blog-single.html">
-                          <h6>Tennessee outback steakhouse the
-                            worker diagnosed</h6>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                  <div class="single-sidebar-widget tag_cloud_widget">
-                    <h4 class="single-sidebar-widget__title">Popular Post</h4>
-                    <ul class="list">
-                      <li>
-                          <a href="#">project</a>
-                      </li>
-                      <li>
-                          <a href="#">love</a>
-                      </li>
-                      <li>
-                          <a href="#">technology</a>
-                      </li>
-                      <li>
-                          <a href="#">travel</a>
-                      </li>
-                      <li>
-                          <a href="#">software</a>
-                      </li>
-                      <li>
-                          <a href="#">life style</a>
-                      </li>
-                      <li>
-                          <a href="#">design</a>
-                      </li>
-                      <li>
-                          <a href="#">illustration</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
+          </div>
           <!-- End Blog Post Siddebar -->
         </div>
     </section>
