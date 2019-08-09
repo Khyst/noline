@@ -37,6 +37,10 @@ body, html {
     transition-delay: 0.5s;
 }
 
+.tag-list-inline{
+    font-family: "Noto Sans KR",serif;
+}
+
 /*
 .single-recent-blog-posts.active .single-recent-blog-post:nth-child(1) {transition-delay: 0.1s;}
 .single-recent-blog-posts.active .single-recent-blog-post:nth-child(2) {transition-delay: 0.2s;}
